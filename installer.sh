@@ -1,10 +1,15 @@
 #!/bin/bash
 
-source ./conf_wine.sh
-source ./ps_install.sh
-source ./paths.sh
+source scripts/conf_wine.sh
+source scripts/ps_install.sh
+source scripts/paths.sh
+
+ver_req() {
+
+}
 
 main() {
+
     wine_setup
     sleep 5
     installPSFunc
