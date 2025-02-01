@@ -17,7 +17,7 @@ wine_setup() {
     sleep 5
     echo -e "${YELLOW}[ info ]${PLAIN} Сonfiguration setting"
     sleep 5
-    WINEPREFIX="$WINE_PREF_PATH" winetricks --unattended fontsmooth=rgb vcrun2008 vcrun2010 vcrun2012 vcrun2013 atmlib msxml3 msxml6 2>&1 | tee "$LOG_FILE"
+    WINEPREFIX="$WINE_PREF_PATH" winetricks --unattended corefonts fontsmooth=rgb gdiplus atmlib msxml3 msxml6 vcrun2008 vcrun2010 vcrun2012 vcrun2013 vcrun2015 2>&1 | tee "$LOG_FILE"
     sleep 5
     echo -e "${YELLOW}[ info ]${PLAIN} The result of the previous command will be written in the ${LOG_FILE} file"
 }
