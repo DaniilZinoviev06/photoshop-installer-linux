@@ -11,7 +11,7 @@ check_dep() {
         show_message_ok "Package $1 is installed"
         sleep 1
     else
-        show_message_bad "Package $1 isnt installed"
+        show_message_bad "Package $1 is not installed"
         sleep 1
 
         if [[ "$ID" == "arch" || "$ID" == "ubuntu" ]]; then
