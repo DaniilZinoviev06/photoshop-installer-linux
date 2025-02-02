@@ -5,7 +5,9 @@ source /etc/os-release
 
 check_dep() {
     $1 --version &> /dev/null || which $1 &> /dev/null
+
     local res=$?
+    declare -A pkg_managers
 
     if [ $res -eq 0 ]; then
         show_message_ok "Package $1 is installed"
@@ -16,6 +18,18 @@ check_dep() {
 
         if [[ "$ID" == "arch" || "$ID" == "ubuntu" ]]; then
             show_question "Your distribution is ${ID}. Download library ${1}?"
+            if [ "$enter_res" == "no" ]; then
+                sleep 3
+                show_message_bad "The program is completed."
+                exit
+            else
+                pkg_managers=( ["arch"]="pacman -S" ["ubuntu"]="apt install" )
+
+                if [[ -v pkg_managers["$ID"] ]]; then
+                    p_manager=${pkg_managers["$ID"]}
+                    sudo $p_manager $1
+                fi
+            fi
         else
             show_message_bad "Install the missing dependencies via the package manager on your distribution!"
             exit

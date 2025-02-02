@@ -21,6 +21,12 @@ show_message_info() {
 }
 
 show_question() {
-    echo -e "${BLUE}[ question ]${PLAIN} $1"
-
+    enter_res=""
+    echo -e "${BLUE}[ question ]${PLAIN} $1 [y/n] "
+    read -r enter
+    if [[ "$enter" =~ $(locale noexpr) ]];then
+        enter_res="no"
+    else
+        enter_res="yes"
+    fi
 }
