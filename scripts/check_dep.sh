@@ -16,4 +16,16 @@ check_dep() {
     fi
 }
 
+ver_req() {
+    dependencies=("curl" "wine" "winetricks")
+
+    show_message_info "Checking the availability of packages"
+
+    for dep in "${dependencies[@]}"; do
+        check_dep $dep
+    done
+
+    exit
+}
+
 
