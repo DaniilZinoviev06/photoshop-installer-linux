@@ -1,16 +1,16 @@
 #!/bin/bash
 
-source ./paths.sh
+source ./scripts/paths.sh
 
 installArchiveFunc() {
     local ARCHIVE="https://iusearchbtw.isgood.host/files/photoshop.tar.xz"
     local ARCHIVE_NAME="photoshop.tar.xz"
 
     #
-    echo -e "${YELLOW}[ info ]${PLAIN} Download the archive. It may take time"
+    show_message_info "Download the archive. It may take time"
     curl -o "$HOME/Загрузки/$ARCHIVE_NAME" "$ARCHIVE"
 
-    echo -e "${YELLOW}[ info ]${PLAIN} Unpacking the archive. It may take time"
+    show_message_info "Unpacking the archive. It may take time"
     tar -xJvf "$HOME/Загрузки/$ARCHIVE_NAME" -C "$HOME/Загрузки/"
 
     WINEPREFIX="$WINE_PREF_PATH" wine "$HOME/Загрузки/setup.exe"
