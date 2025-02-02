@@ -17,7 +17,7 @@ check_dep() {
         sleep 1
 
         if [[ "$ID" == "arch" || "$ID" == "ubuntu" ]]; then
-            show_question "Your distribution is ${ID}. Download library ${1}?"
+            show_question "Your distribution is ${ID}. Download ${1} library?"
             if [ "$enter_res" == "no" ]; then
                 sleep 3
                 show_message_bad "The program is completed."
@@ -45,8 +45,6 @@ ver_req() {
     for dep in "${dependencies[@]}"; do
         check_dep $dep
     done
-
-    exit
 }
 
 
