@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source ./scripts/paths.sh
+source /etc/os-release
 
 check_dep() {
     $1 --version &> /dev/null || which $1 &> /dev/null
@@ -12,7 +13,13 @@ check_dep() {
     else
         show_message_bad "Package $1 isnt installed"
         sleep 1
-        show_question ""
+
+        if [[ "$ID" == "arch" || "$ID" == "ubuntu" ]]; then
+            show_question "Your distribution is ${ID}. Download library ${1}?"
+        else
+            show_message_bad "Install the missing dependencies via the package manager on your distribution!"
+            exit
+        fi
     fi
 }
 
