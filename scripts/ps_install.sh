@@ -12,9 +12,20 @@ installArchivesFunc() {
             show_message_bad "Failed to upload file $1"
             exit
         else
-            if [ -f "${SCRIPT_DOWNLOADS}/$1" ];then
+            if [ -f "${SCRIPT_DOWNLOADS}/$1" ]; then
                 show_message_ok "File uploaded"
-                return 0
+
+                local file_checksum=$(sha256sum "${SCRIPT_DOWNLOADS}/$1" | awk '{print $1}')
+
+                show_message_info "sha256..."
+
+                if [ $file_checksum == $3 ]; then
+                    show_message_ok "Checksum ok..."
+                    return 0
+                else
+                    show_message_bad "Checksum problem. Re-try..."
+                    rm "${SCRIPT_DOWNLOADS}/$1"
+                fi
             else
                 curl -o "${SCRIPT_DOWNLOADS}/$1" "$2"
             fi
@@ -33,10 +44,12 @@ installArchivesFunc() {
 installPSFunc() {
     local ARCHIVE="https://iusearchbtw.isgood.host/files/photoshop.tar.xz"
     local ARCHIVE_NAME="photoshop.tar.xz"
+    local EXE_SHA256="f21c9e793077b618fafa2191b7312c7532fad8c1c062e91e237d98b4faaa078b"
+    #   local SETTINGS_SHA256=""
 
     mkdir -p "$SCRIPT_DOWNLOADS"
 
-    installArchivesFunc "$ARCHIVE_NAME" "$ARCHIVE"
+    installArchivesFunc "$ARCHIVE_NAME" "$ARCHIVE" "$EXE_SHA256"
 
     sleep 5
 
