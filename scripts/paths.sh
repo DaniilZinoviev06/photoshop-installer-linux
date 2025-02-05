@@ -6,6 +6,7 @@ SCRIPT_DOWNLOADS="$(pwd)/script_downloads"
 
 PHOTOSHOP="${HOME}/photoshop/drive_c/Program Files (x86)/photoshop/Photoshop.exe"
 LOG_FILE="$WINE_PREF_PATH/winetricks_install.log"
+EXE_SHA256="f21c9e793077b618fafa2191b7312c7532fad8c1c062e91e237d98b4faaa078b"
 
 RED="\e[31m"
 GREEN="\e[32m"
