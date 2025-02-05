@@ -9,24 +9,47 @@ BLUE="\e[34m"
 PLAIN="\e[0m"
 
 show_message_bad() {
-    echo -e "${RED}[ bad ]${PLAIN} $1\n"
+    echo "-----------------------------"
+    echo -e "${RED}[ bad ]${PLAIN} $1"
+    echo "-----------------------------"
 }
 
 show_message_ok() {
-    echo -e "${GREEN}[ ok ]${PLAIN} $1\n"
+    echo "-----------------------------"
+    echo -e "${GREEN}[ ok ]${PLAIN} $1"
+    echo "-----------------------------"
 }
 
 show_message_info() {
-    echo -e "${YELLOW}[ info ]${PLAIN} $1\n"
+    echo "-----------------------------"
+    echo -e "${YELLOW}[ info ]${PLAIN} $1"
+    echo "-----------------------------"
 }
 
 show_question() {
-    enter_res=""
-    echo -e "${BLUE}[ question ]${PLAIN} $1 [y/n] "
-    read -r enter
-    if [[ "$enter" =~ $(locale noexpr) ]]; then
-        enter_res="no"
+    local default_display
+    local no_expr=$(locale noexpr)
+    local yes_expr=$(locale yesexpr)
+
+    if [[ "$2" == "y" ]]; then
+        default_display="Y/n"
     else
+        default_display="y/N"
+    fi
+
+    local enter=""
+    echo -e "${BLUE}[ question ]${PLAIN} "$1" [$default_display] "
+    read -r enter
+
+    if [[ -z "$enter" ]]; then
+        enter="$2"
+    fi
+
+    if [[ "$enter" =~ $no_expr ]]; then
+        enter_res="no"
+    elif [[ "$enter" =~ $yes_expr ]]; then
         enter_res="yes"
+    else
+        enter_res="invalid"
     fi
 }

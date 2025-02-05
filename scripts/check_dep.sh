@@ -17,7 +17,7 @@ check_dep() {
         sleep 1
 
         if [[ "$ID" == "arch" || "$ID" == "ubuntu" ]]; then
-            show_question "Your distribution is ${ID}. Download ${1} library?"
+            show_question "Your distribution is ${ID}. Download ${1} library?" "y"
             if [ "$enter_res" == "no" ]; then
                 sleep 3
                 show_message_bad "The program is completed."

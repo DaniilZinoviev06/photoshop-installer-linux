@@ -55,5 +55,5 @@ installPSFunc() {
     sleep 5
 
     mv "$(pwd)/Adobe" "${HOME}/photoshop/drive_c/users/$(whoami)/AppData/Roaming/"
-    WINEPREFIX=~/photoshop wine "${HOME}/photoshop/drive_c/Program Files (x86)/photoshop/Photoshop.exe"
+    WINEPREFIX="$WINE_PREF_PATH" wine "${HOME}/photoshop/drive_c/Program Files (x86)/photoshop/Photoshop.exe"
 }
