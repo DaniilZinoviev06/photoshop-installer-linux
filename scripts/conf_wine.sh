@@ -21,7 +21,7 @@ wine_setup() {
 
     sleep 5
 
-    show_message_info "Install the necessary components. Wait"
+    show_message_info "Install the necessary components. Wait..."
 
     sleep 5
 
@@ -34,5 +34,5 @@ wine_setup() {
 
     sleep 5
 
-    show_message_info "The result of the previous command will be written in the ${LOG_FILE} file"
+    show_message_info "The result of the previous command will be written in the ${LOG_FILE} file."
 }
