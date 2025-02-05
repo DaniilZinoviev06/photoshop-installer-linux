@@ -1,6 +1,11 @@
 #!/bin/bash
 
 WINE_PREF_PATH="$HOME/photoshop"
+# for exe
+SCRIPT_DOWNLOADS="$(pwd)/script_downloads"
+
+PHOTOSHOP="${HOME}/photoshop/drive_c/Program Files (x86)/photoshop/Photoshop.exe"
+LOG_FILE="$WINE_PREF_PATH/winetricks_install.log"
 
 RED="\e[31m"
 GREEN="\e[32m"

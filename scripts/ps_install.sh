@@ -12,17 +12,17 @@ installArchivesFunc() {
             show_message_bad "Failed to upload file $1"
             exit
         else
-            if [ -f "$(pwd)/$1" ];then
+            if [ -f "${SCRIPT_DOWNLOADS}/$1" ];then
                 show_message_ok "File uploaded"
                 return 0
             else
-                curl -o "$(pwd)/$1" "$2"
+                curl -o "${SCRIPT_DOWNLOADS}/$1" "$2"
             fi
             ((count++))
         fi
     done
 
-    tar -xJvf "$(pwd)/$ARCHIVE_NAME" -C "$(pwd)"
+    tar -xJvf "${SCRIPT_DOWNLOADS}/$ARCHIVE_NAME" -C "${SCRIPT_DOWNLOADS}"
 
     if [[ $? -ne 0 ]]; then
         show_message_error "Error when opening archive. Exit..."
@@ -33,6 +33,8 @@ installArchivesFunc() {
 installPSFunc() {
     local ARCHIVE="https://iusearchbtw.isgood.host/files/photoshop.tar.xz"
     local ARCHIVE_NAME="photoshop.tar.xz"
+
+    mkdir -p "$SCRIPT_DOWNLOADS"
 
     installArchivesFunc "$ARCHIVE_NAME" "$ARCHIVE"
 
@@ -45,7 +47,7 @@ installPSFunc() {
 
     sleep 5
 
-    WINEPREFIX="$WINE_PREF_PATH" wine "$(pwd)/setup.exe"
+    WINEPREFIX="$WINE_PREF_PATH" wine "${SCRIPT_DOWNLOADS}/setup.exe"
 
     sleep 5
 
@@ -54,6 +56,6 @@ installPSFunc() {
 
     sleep 5
 
-    mv "$(pwd)/Adobe" "${HOME}/photoshop/drive_c/users/$(whoami)/AppData/Roaming/"
-    WINEPREFIX="$WINE_PREF_PATH" wine "${HOME}/photoshop/drive_c/Program Files (x86)/photoshop/Photoshop.exe"
+    mv "${SCRIPT_DOWNLOADS}/Adobe" "${HOME}/photoshop/drive_c/users/$(whoami)/AppData/Roaming/"
+    WINEPREFIX="$WINE_PREF_PATH" wine "$PHOTOSHOP"
 }
