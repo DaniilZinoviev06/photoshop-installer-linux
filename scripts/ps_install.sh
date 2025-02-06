@@ -2,9 +2,11 @@
 
 source ./scripts/paths.sh
 source ./scripts/camera_raw.sh
+source ./scripts/ps_desktop.sh
 
 launcherFunc() {
     show_message_info "Photoshop is starting..."
+    notify-send "Photoshop is starting..."
     WINEPREFIX="$WINE_PREF_PATH" wine "$PHOTOSHOP"
 }
 
@@ -75,16 +77,22 @@ installPSFunc() {
 
     sleep 5
 
-    show_message_question "Do you want to install the Camera Raw plugin (To open image formats like .NEF .ARW)? P.S. You can do it later" "y"
+    show_message_question "Do you want to install the Camera Raw plugin (To open image formats like .NEF, .ARW)? P.S. You can do it later" "y"
     if [ "$enter_res" == "no" ]; then
-        show_message_info "OK. We continue without the plugin..."
+
+        show_message_info "OK. Continue without Camera Raw the plugin..."
+
     else
-        show_message_info "OK. Starting to download the plugin..."
+        show_message_info "OK. Starting to download the Camera Raw plugin..."
 
         sleep 5
 
         installArchiveFunc "" "" ""
     fi
+
+    sleep 5
+
+    createDesktopFunc
 
     sleep 5
 
