@@ -3,7 +3,7 @@
 source ./scripts/paths.sh
 
 # 2 params: archive name and url
-installArchivesFunc() {
+installArchiveFunc() {
     local count=0
     show_message_info "Download the archive. It may take time"
 
@@ -16,8 +16,6 @@ installArchivesFunc() {
                 show_message_ok "File uploaded"
 
                 local file_checksum=$(sha256sum "${SCRIPT_DOWNLOADS}/$1" | awk '{print $1}')
-                echo "//////////////////////////////////////////"
-                echo "$file_checksum"
 
                 show_message_info "sha256..."
 
@@ -34,7 +32,7 @@ installArchivesFunc() {
                     break
                 else
                     show_message_bad "Checksum problem. Re-try..."
-                    trash "${SCRIPT_DOWNLOADS}/$1"
+                    rm "${SCRIPT_DOWNLOADS}/$1"
                 fi
             else
                 curl -o "${SCRIPT_DOWNLOADS}/$1" "$2"
@@ -52,7 +50,7 @@ installPSFunc() {
 
     mkdir -p "$SCRIPT_DOWNLOADS"
 
-    installArchivesFunc "$ARCHIVE_NAME" "$ARCHIVE" "$TAREXE_SHA256"
+    installArchiveFunc "$ARCHIVE_NAME" "$ARCHIVE" "$TAREXE_SHA256"
 
     sleep 5
 
@@ -61,7 +59,7 @@ installPSFunc() {
     sleep 5
 
     # settings for photoshop
-    installArchivesFunc "Adobe.tar.xz" "https://iusearchbtw.isgood.host/files/Adobe.tar.xz" "$SETTINGS_SHA256"
+    installArchiveFunc "Adobe.tar.xz" "https://iusearchbtw.isgood.host/files/Adobe.tar.xz" "$SETTINGS_SHA256"
 
     sleep 5
 

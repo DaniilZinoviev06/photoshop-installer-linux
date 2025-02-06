@@ -53,7 +53,7 @@ ver_req() {
 
     sleep 2
 
-    dependencies=("curl" "wine" "winetricks" "trash")
+    dependencies=("curl" "wine" "winetricks")
 
     show_message_info "Checking the availability of packages"
 
