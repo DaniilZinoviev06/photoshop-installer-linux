@@ -1,6 +1,12 @@
 #!/bin/bash
 
 source ./scripts/paths.sh
+source ./scripts/camera_raw.sh
+
+launcherFunc() {
+    show_message_info "Photoshop is starting..."
+    WINEPREFIX="$WINE_PREF_PATH" wine "$PHOTOSHOP"
+}
 
 # 2 params: archive name and url
 installArchiveFunc() {
@@ -66,5 +72,21 @@ installPSFunc() {
     sleep 5
 
     mv "${SCRIPT_DOWNLOADS}/Adobe" "${HOME}/photoshop/drive_c/users/$(whoami)/AppData/Roaming/"
-    WINEPREFIX="$WINE_PREF_PATH" wine "$PHOTOSHOP"
+
+    sleep 5
+
+    show_message_question "Do you want to install the Camera Raw plugin (To open image formats like .NEF .ARW)? P.S. You can do it later" "y"
+    if [ "$enter_res" == "no" ]; then
+        show_message_info "OK. We continue without the plugin..."
+    else
+        show_message_info "OK. Starting to download the plugin..."
+
+        sleep 5
+
+        installArchiveFunc "" "" ""
+    fi
+
+    sleep 5
+
+    launcherFunc
 }
