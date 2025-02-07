@@ -12,6 +12,9 @@ launcherFunc() {
 
 # 2 params: archive name and url
 installArchiveFunc() {
+
+    mkdir -p "$SCRIPT_DOWNLOADS"
+
     local count=0
     show_message_info "Download the archive. It may take time"
 
@@ -90,7 +93,7 @@ installPSFunc() {
 
     sleep 5
 
-    # rm "/home/daniil/.local/share/applications/wine/Programs/photoshop"
+    rm "$HOME/.local/share/applications/wine/Programs/photoshop"
 
     createDesktopFunc
 

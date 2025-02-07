@@ -38,5 +38,5 @@ cr_installer() {
 
     sleep 5
 
-    installArchiveFunc "$ARCHIVE_NAME_CR" "$ARCHIVE_CR" "$CR_SHA256"
+    install_cr
 }

@@ -41,7 +41,7 @@ check_dep() {
                 fi
             fi
         else
-            show_message_bad "Install the missing dependencies via the package manager on your distribution! Then re-run the script."
+            show_message_bad "Install the missing dependencies(${1}) via the package manager on your distribution! Then re-run the script."
             exit
         fi
     fi
