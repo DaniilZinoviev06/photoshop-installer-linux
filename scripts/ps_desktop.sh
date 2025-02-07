@@ -22,6 +22,8 @@ createDesktopFunc() {
 
     echo "$INFO" > "$PS_DESKTOP"
 
+    show_message_info "Create a shortcut. Enter your password..."
+
     sudo mv "$PS_DESKTOP" "/usr/share/applications/photoshop.desktop"
 }
 

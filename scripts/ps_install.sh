@@ -57,6 +57,9 @@ installPSFunc() {
     local ARCHIVE_NAME_SETTINGS="Adobe.tar.xz"
     local TAREXE_SHA256="f83ebbf7c23c1ba3578bb853acaf9439c5168da2374a16b5cdb5a8214c29c0a4"
     local SETTINGS_SHA256="1b2f3a6d3537342c676a9eca8e0547ba77180a77c62076831c64d662266d352c"
+    local ARCHIVE_CR="https://iusearchbtw.isgood.host/files/camera_raw_12.tar.xz"
+    local ARCHIVE_NAME_CR="camera_raw_12.tar.xz"
+    local CR_SHA256="d290554ea3984a7ea98ffeb86f2fab7d6f25b525c84a303613c7307d5ca169b6"
 
     mkdir -p "$SCRIPT_DOWNLOADS"
 
@@ -84,13 +87,13 @@ installPSFunc() {
 
     else
         show_message_info "OK. Starting to download the Camera Raw plugin..."
-
-        sleep 5
-
-        installArchiveFunc "" "" ""
+        sleep 2
+        installArchiveFunc "$ARCHIVE_NAME_CR" "$ARCHIVE_CR" "$CR_SHA256"
     fi
 
     sleep 5
+
+    # rm "/home/daniil/.local/share/applications/wine/Programs/photoshop"
 
     createDesktopFunc
 
