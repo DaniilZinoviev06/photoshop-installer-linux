@@ -25,7 +25,7 @@
 <div align="center"> 
   <a href="#about">About</a>&ensp;&ensp;&ensp;
   <a href="#installation">Installation</a>&ensp;&ensp;&ensp;
-  <a href="#Gallery">Gallery</a>&ensp;&ensp;&ensp;
+  <a href="#gallery">Gallery</a>&ensp;&ensp;&ensp;
 </div>
 
 <h2 id="about">:scroll: About</h2>
@@ -38,7 +38,7 @@ This script will help you install Photoshop CC 2018 on your Linux distribution u
 
 The purpose of this script is to minimize the possible difficulties that users may encounter during self-installation and configuration. It provides a step-by-step guide and performs all the necessary operations so that you can focus on your work without being distracted by the technical details of the compatibility processes.
 
-## :open_file_folder: Installation
+<h2 id="installation">:open_file_folder: Installation</h2>
 
 Clone the repository:
 ```bash
@@ -46,7 +46,7 @@ git clone https://github.com/DaniilZinoviev06/photoshop-installer-linux.git
 cd photoshop-installer-linux
 ```
 
-## 🌄 Gallery
+<h2 id="gallery">🌄 Gallery</h2>
 
 <p align="center">
     <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Arch"/>
