@@ -22,9 +22,9 @@
   <img alt="Image" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/banner.png">
 </div>
 
-## About
+## :scroll: About
 
-## Gallery
+## :camera: Gallery
 
 <p align="center">
     <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Arch"/>
