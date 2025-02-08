@@ -22,7 +22,13 @@
   <img alt="Image" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/banner.png">
 </div>
 
-## :scroll: About
+<div align="center"> 
+  <a href="#about">About</a>&ensp;&ensp;&ensp;
+  <a href="#installation">Installation</a>&ensp;&ensp;&ensp;
+  <a href="#Gallery">Gallery</a>&ensp;&ensp;&ensp;
+</div>
+
+<h2 id="about">:scroll: About</h2>
 This script will help you install Photoshop CC 2018 on your Linux distribution using Wine. 
 
 > [!NOTE]
@@ -40,7 +46,7 @@ git clone https://github.com/DaniilZinoviev06/photoshop-installer-linux.git
 cd photoshop-installer-linux
 ```
 
-## :camera: Gallery
+## 🌄 Gallery
 
 <p align="center">
     <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Arch"/>
