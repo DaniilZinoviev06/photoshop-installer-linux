@@ -1,10 +1,10 @@
-[![language](https://img.shields.io/badge/language-Bash-347d39)](#)
-[![OS](https://img.shields.io/badge/OS-Linux-FF6F61)](#)
-[![Requirement](https://img.shields.io/badge/requirement-Wine-da2828)](#)
-[![Requirement](https://img.shields.io/badge/requirement-Winetricks-493430)](#)
-[![Requirement](https://img.shields.io/badge/requirement-curl-E1B97F)](#)
-[![photoshop](https://img.shields.io/badge/photoshop-CC2018-d9f5fe)](#)
-[![camera_raw](https://img.shields.io/badge/CameraRaw-v12-bf0000)](#)
+[![language](https://img.shields.io/badge/language-Bash-001d26)](#)
+[![OS](https://img.shields.io/badge/OS-Linux-001d26)](#)
+[![Requirement](https://img.shields.io/badge/requirement-Wine-001d26)](#)
+[![Requirement](https://img.shields.io/badge/requirement-Winetricks-001d26)](#)
+[![Requirement](https://img.shields.io/badge/requirement-curl-001d26)](#)
+[![photoshop](https://img.shields.io/badge/photoshop-CC2018-001d26)](#)
+[![camera_raw](https://img.shields.io/badge/CameraRaw-v12-001d26)](#)
 [![GitHub last commit](https://img.shields.io/github/last-commit/DaniilZinoviev06/photoshop-installer-linux)](#)
 [![GitHub License](https://img.shields.io/github/license/DaniilZinoviev06/photoshop-installer-linux)](#)
 [![GitHub Repo stars](https://img.shields.io/github/stars/DaniilZinoviev06/photoshop-installer-linux)](#)
@@ -13,9 +13,9 @@
 [![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/DaniilZinoviev06/photoshop-installer-linux/total)](#)
 [![GitHub Release](https://img.shields.io/github/v/release/DaniilZinoviev06/photoshop-installer-linux)](#)
 [![GitHub Release Date](https://img.shields.io/github/release-date/DaniilZinoviev06/photoshop-installer-linux)](#)
-[![Tested on](https://img.shields.io/badge/tested-Arch-0ab9dc)](#)
-[![Tested on](https://img.shields.io/badge/tested-Ubuntu-4a1211)](#)
-[![Tested on](https://img.shields.io/badge/tested-Fedora-250bdd)](#)
+[![Tested on](https://img.shields.io/badge/tested-Arch-001d26)](#)
+[![Tested on](https://img.shields.io/badge/tested-Ubuntu-001d26)](#)
+[![Tested on](https://img.shields.io/badge/tested-Fedora-001d26)](#)
 
 
 <div align = center>
@@ -25,6 +25,11 @@
 <div align="center"> 
   <a href="#about">About</a>&ensp;&ensp;&ensp;
   <a href="#installation">Installation</a>&ensp;&ensp;&ensp;
+  <a href="#gallery">Gallery</a>&ensp;&ensp;&ensp;
+</div><br>
+
+<div align="center"> 
+  <a href="#about">About</a>&ensp;&ensp;&ensp;
   <a href="#gallery">Gallery</a>&ensp;&ensp;&ensp;
 </div>
 
@@ -59,3 +64,5 @@ cd photoshop-installer-linux
 &nbsp;
     <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Alt"/>
 </p> 
+
+<h2 id="uninstall">:red_circle: Uninstall</h2>
