@@ -1,10 +1,10 @@
-[![language](https://img.shields.io/badge/language-Bash-E4BF85)](#)
+[![language](https://img.shields.io/badge/language-Bash-347d39)](#)
 [![OS](https://img.shields.io/badge/OS-Linux-FF6F61)](#)
-[![Requirement](https://img.shields.io/badge/requirement-Wine-FF7E6B)](#)
-[![Requirement](https://img.shields.io/badge/requirement-Winetricks-FCE4B3)](#)
+[![Requirement](https://img.shields.io/badge/requirement-Wine-da2828)](#)
+[![Requirement](https://img.shields.io/badge/requirement-Winetricks-493430)](#)
 [![Requirement](https://img.shields.io/badge/requirement-curl-E1B97F)](#)
-[![photoshop](https://img.shields.io/badge/photoshop-CC2018-C8C88A)](#)
-[![camera_raw](https://img.shields.io/badge/CameraRaw-v12-FF7E6B)](#)
+[![photoshop](https://img.shields.io/badge/photoshop-CC2018-d9f5fe)](#)
+[![camera_raw](https://img.shields.io/badge/CameraRaw-v12-bf0000)](#)
 [![GitHub last commit](https://img.shields.io/github/last-commit/DaniilZinoviev06/photoshop-installer-linux)](#)
 [![GitHub License](https://img.shields.io/github/license/DaniilZinoviev06/photoshop-installer-linux)](#)
 [![GitHub Repo stars](https://img.shields.io/github/stars/DaniilZinoviev06/photoshop-installer-linux)](#)
@@ -13,9 +13,9 @@
 [![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/DaniilZinoviev06/photoshop-installer-linux/total)](#)
 [![GitHub Release](https://img.shields.io/github/v/release/DaniilZinoviev06/photoshop-installer-linux)](#)
 [![GitHub Release Date](https://img.shields.io/github/release-date/DaniilZinoviev06/photoshop-installer-linux)](#)
-[![Tested on](https://img.shields.io/badge/tested-Arch-FF7E6B)](#)
-[![Tested on](https://img.shields.io/badge/tested-Ubuntu-65D5C3)](#)
-[![Tested on](https://img.shields.io/badge/tested-Fedora-FF7E6B)](#)
+[![Tested on](https://img.shields.io/badge/tested-Arch-0ab9dc)](#)
+[![Tested on](https://img.shields.io/badge/tested-Ubuntu-4a1211)](#)
+[![Tested on](https://img.shields.io/badge/tested-Fedora-250bdd)](#)
 
 
 <div align = center>
@@ -23,6 +23,22 @@
 </div>
 
 ## :scroll: About
+This script will help you install Photoshop CC 2018 on your Linux distribution using Wine. 
+
+> [!NOTE]
+> Wine (originally an acronym for "Wine Is Not an Emulator") is a compatibility layer capable of running Windows applications on several POSIX-compliant operating systems, such as Linux, macOS, & BSD. Instead of simulating internal Windows logic like a virtual machine or emulator, Wine translates Windows API calls into POSIX calls on-the-fly, eliminating the performance and memory penalties of other methods and allowing you to cleanly integrate Windows applications into your desktop.
+> 
+> Taken from <a href="https://www.winehq.org/">here</a>
+
+The purpose of this script is to minimize the possible difficulties that users may encounter during self-installation and configuration. It provides a step-by-step guide and performs all the necessary operations so that you can focus on your work without being distracted by the technical details of the compatibility processes.
+
+## :open_file_folder: Installation
+
+Clone the repository:
+```bash
+git clone https://github.com/DaniilZinoviev06/photoshop-installer-linux.git
+cd photoshop-installer-linux
+```
 
 ## :camera: Gallery
 
