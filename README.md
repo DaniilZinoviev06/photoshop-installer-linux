@@ -23,3 +23,17 @@
 </div>
 
 ## About
+
+## Gallery
+
+<p align="center">
+    <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Arch"/>
+&nbsp;
+    <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_ubuntu.png" alt="Ubuntu"/>
+</p>
+
+<p align="center">
+    <img width="50%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Fedora"/>
+&nbsp;
+    <img width="50%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Alt"/>
+</p> 
