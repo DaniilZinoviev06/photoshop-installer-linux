@@ -80,10 +80,10 @@ installPSFunc() {
 
     sleep 5
 
-    show_message_question "Do you want to install the Camera Raw plugin (To open image formats like .NEF, .ARW)? P.S. You can do it later" "y"
+    show_question "Do you want to install the Camera Raw plugin (To open image formats like .NEF, .ARW)? P.S. You can do it later" "y"
     if [ "$enter_res" == "no" ]; then
 
-        show_message_info "OK. Continue without Camera Raw the plugin..."
+        show_message_info "OK. Continue without the Camera Raw plugin..."
 
     else
         show_message_info "OK. Starting to download the Camera Raw plugin..."
@@ -93,7 +93,7 @@ installPSFunc() {
 
     sleep 5
 
-    rm "$HOME/.local/share/applications/wine/Programs/photoshop"
+    rm "$HOME/.local/share/applications/wine/Programs/photoshop/photoshop.desktop"
 
     createDesktopFunc
 
