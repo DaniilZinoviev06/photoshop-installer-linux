@@ -1,3 +1,3 @@
 #!/bin/bash
 
-source ./scripts/paths.sh
+source ./scripts/general.sh

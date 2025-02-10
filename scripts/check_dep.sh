@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./scripts/paths.sh
+source ./scripts/general.sh
 source /etc/os-release
 
 check_arch() {
@@ -26,29 +26,13 @@ check_dep() {
         show_message_bad "Package $1 is not installed"
         sleep 1
 
-        if [[ "$ID" == "arch" || "$ID" == "ubuntu" ]]; then
-            show_question "Your distribution is ${ID}. Download ${1} library?" "y"
-            if [ "$enter_res" == "no" ]; then
-                sleep 3
-                show_message_bad "The program is completed."
-                exit
-            else
-                pkg_managers=( ["arch"]="pacman -S" ["ubuntu"]="apt install" )
-
-                if [[ -v pkg_managers["$ID"] ]]; then
-                    p_manager=${pkg_managers["$ID"]}
-                    sudo $p_manager $1
-                fi
-            fi
-        else
-            show_message_bad "Install the missing dependencies(${1}) via the package manager on your distribution! Then re-run the script."
-            exit
-        fi
+        show_message_bad "Install the missing dependencies(${1}) via the package manager on your distribution! Then re-run the script."
+        exit
     fi
 }
 
 ver_req() {
-    show_message_info "Checking the OS arch"
+    show_message_info "Checking the OS"
     check_arch
 
     sleep 2

@@ -1,6 +1,7 @@
 #!/bin/bash
 
-source ./scripts/paths.sh
+source ./scripts/general.sh
+
 source ./scripts/ps_desktop.sh
 
 install_cr() {

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./scripts/paths.sh
+source ./scripts/general.sh
 
 wine_setup() {
     show_message_info "Сreate files and directories"

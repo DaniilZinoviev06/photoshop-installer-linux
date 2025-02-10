@@ -58,3 +58,46 @@ show_question() {
         enter_res="invalid"
     fi
 }
+
+# 2 params: archive name and url
+installArchiveFunc() {
+
+    mkdir -p "$SCRIPT_DOWNLOADS"
+
+    local count=0
+    show_message_info "Download the archive. It may take time"
+
+    while true; do
+        if [ $count -ge 5 ]; then
+            show_message_bad "Failed to upload file $1"
+            exit
+        else
+            if [ -f "${SCRIPT_DOWNLOADS}/$1" ]; then
+                show_message_ok "File uploaded"
+
+                local file_checksum=$(sha256sum "${SCRIPT_DOWNLOADS}/$1" | awk '{print $1}')
+
+                show_message_info "sha256..."
+
+                if [ $file_checksum == $3 ]; then
+                    show_message_ok "Checksum ok..."
+
+                    tar -xJvf "${SCRIPT_DOWNLOADS}/$1" -C "${SCRIPT_DOWNLOADS}"
+
+                    if [[ $? -ne 0 ]]; then
+                        show_message_error "Error when opening archive. Exit..."
+                        exit
+                    fi
+
+                    break
+                else
+                    show_message_bad "Checksum problem. Re-try..."
+                    rm "${SCRIPT_DOWNLOADS}/$1"
+                fi
+            else
+                curl -o "${SCRIPT_DOWNLOADS}/$1" "$2"
+            fi
+            ((count++))
+        fi
+    done
+}
