@@ -2,8 +2,6 @@
 
 source ./scripts/general.sh
 
-source ./scripts/ps_desktop.sh
-
 install_cr() {
     local ARCHIVE_CR="https://iusearchbtw.isgood.host/files/camera_raw_12.tar.xz"
     local ARCHIVE_NAME_CR="camera_raw_12.tar.xz"

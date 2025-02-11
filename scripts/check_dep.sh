@@ -17,7 +17,6 @@ check_dep() {
     $1 --version &> /dev/null || which $1 &> /dev/null
 
     local res=$?
-    declare -A pkg_managers
 
     if [ $res -eq 0 ]; then
         show_message_ok "Package $1 is installed"
