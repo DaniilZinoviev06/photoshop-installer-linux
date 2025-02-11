@@ -3,6 +3,7 @@
 source ./scripts/check_dep.sh
 source ./scripts/conf_wine.sh
 source ./scripts/ps_install.sh
+source ./scripts/uninstaller.sh
 
 
 source ./scripts/general.sh
@@ -80,7 +81,8 @@ main() {
             ;;
 
             4)
-                echo "delete"
+                clear
+                uninstallFunc
             ;;
 
             *)

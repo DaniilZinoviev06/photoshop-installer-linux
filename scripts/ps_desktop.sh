@@ -16,17 +16,11 @@ StartupWMClass=photoshop.exe
 # StartupWMClass: i spotted this from Gictorbit. Thanks to him for this
 
 createDesktopFunc() {
-    PS_DESKTOP="$(pwd)/photoshop.desktop"
-
     cp "$(pwd)/photoshop-installer/images/photoshop_icon.png" "$HOME/.local/share/icons/"
 
-    echo "$INFO" > "$PS_DESKTOP"
+    sudo touch "/home/$USER/.local/share/applications/photoshop.desktop"
 
-    show_message_info "Create a shortcut. Enter your password..."
-
-    sudo mv "$PS_DESKTOP" "/usr/share/applications/photoshop.desktop"
-
-    show_message_info "File created in \e[93m/usr/share/applications/photoshop.desktop\e[0m..."
+    show_message_info "File created in \e[93m/home/$USER/.local/share/applications/\e[0m..."
 }
 
 
