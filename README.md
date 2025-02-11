@@ -24,14 +24,10 @@
 
 <div align="center"> 
   <a href="#about">About</a>&ensp;&ensp;&ensp;
+  <a href="#links">Links</a>&ensp;&ensp;&ensp;
   <a href="#installation">Installation</a>&ensp;&ensp;&ensp;
   <a href="#gallery">Gallery</a>&ensp;&ensp;&ensp;
 </div><br>
-
-<div align="center"> 
-  <a href="#about">About</a>&ensp;&ensp;&ensp;
-  <a href="#gallery">Gallery</a>&ensp;&ensp;&ensp;
-</div>
 
 <h2 id="about">:scroll: About</h2>
 <p>This script will help you install Photoshop CC 2018 on your Linux distribution using Wine.</p>
@@ -42,6 +38,8 @@
 > Taken from <a href="https://www.winehq.org/">here</a>
 
 The purpose of this script is to minimize the possible difficulties that users may encounter during self-installation and configuration. It provides a step-by-step guide and performs all the necessary operations so that you can focus on your work without being distracted by the technical details of the compatibility processes.
+
+<h2 id="links">:scroll: Links</h2>
 
 <h2 id="installation">:open_file_folder: Installation</h2>
 
