@@ -18,13 +18,15 @@ StartupWMClass=photoshop.exe
 createDesktopFunc() {
     PS_DESKTOP="$(pwd)/photoshop.desktop"
 
-    cp "/home/$(whoami)/photoshop-installer/images/photoshop_icon.png" "$HOME/.local/share/icons/"
+    cp "$(pwd)/photoshop-installer/images/photoshop_icon.png" "$HOME/.local/share/icons/"
 
     echo "$INFO" > "$PS_DESKTOP"
 
     show_message_info "Create a shortcut. Enter your password..."
 
     sudo mv "$PS_DESKTOP" "/usr/share/applications/photoshop.desktop"
+
+    show_message_info "File created in \e[93m/usr/share/applications/photoshop.desktop\e[0m..."
 }
 
 

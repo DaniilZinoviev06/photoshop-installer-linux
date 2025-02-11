@@ -5,6 +5,8 @@ source ./scripts/general.sh
 wine_setup() {
     show_message_info "Сreate files and directories"
 
+    show_message_info "Сreate Wine prefix in \e[93m${HOME}\e[0m \e[94mDo not change the location of the generated prefix\e[94m"
+
     mkdir -p "$WINE_PREF_PATH"
     touch "$WINE_PREF_PATH/winetricks_install.log"
 

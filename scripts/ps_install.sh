@@ -24,7 +24,7 @@ installPSFunc() {
 
     sleep 5
 
-    WINEPREFIX="$WINE_PREF_PATH" wine "${SCRIPT_DOWNLOADS}/setup.exe"
+    WINEPREFIX="${WINE_PREF_PATH}" wine "${SCRIPT_DOWNLOADS}/setup.exe"
 
     sleep 5
 
@@ -33,7 +33,7 @@ installPSFunc() {
 
     sleep 5
 
-    mv "${SCRIPT_DOWNLOADS}/Adobe" "${HOME}/photoshop/drive_c/users/$(whoami)/AppData/Roaming/"
+    mv "${SCRIPT_DOWNLOADS}/Adobe" "${HOME}/photoshop/drive_c/users/${USER}/AppData/Roaming/"
 
     sleep 5
 

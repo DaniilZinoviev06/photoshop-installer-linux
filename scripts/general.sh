@@ -92,7 +92,9 @@ installArchiveFunc() {
                     break
                 else
                     show_message_bad "Checksum problem. Re-try..."
-                    rm "${SCRIPT_DOWNLOADS}/$1"
+                    if [ -f "${SCRIPT_DOWNLOADS}/$1" ]; then
+                        rm "${SCRIPT_DOWNLOADS}/$1"
+                    fi
                 fi
             else
                 curl -o "${SCRIPT_DOWNLOADS}/$1" "$2"
