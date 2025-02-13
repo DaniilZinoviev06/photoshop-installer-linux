@@ -4,7 +4,7 @@
 [![Requirement](https://img.shields.io/badge/requirement-Winetricks-001d26?labelColor=%2300c8ff&color=%23001d26)](#)
 [![Requirement](https://img.shields.io/badge/requirement-curl-001d26?labelColor=%2300c8ff&color=%23001d26)](#)
 [![photoshop](https://img.shields.io/badge/photoshop-CC2018-001d26?labelColor=%2300c8ff&color=%23001d26)](#)
-[![camera_raw](https://img.shields.io/badge/CameraRaw-v12-001d26?labelColor=%2300c8ff&color=%23001d26)](#)
+[![camera_raw](https://img.shields.io/badge/CameraRaw-v10-001d26?labelColor=%2300c8ff&color=%23001d26)](#)
 [![GitHub last commit](https://img.shields.io/github/last-commit/DaniilZinoviev06/photoshop-installer-linux?labelColor=%2300c8ff&color=%23001d26)](#)
 [![GitHub License](https://img.shields.io/github/license/DaniilZinoviev06/photoshop-installer-linux?labelColor=%2300c8ff&color=%23001d26)](#)
 [![GitHub Repo stars](https://img.shields.io/github/stars/DaniilZinoviev06/photoshop-installer-linux?labelColor=%2300c8ff&color=%23001d26)](#)
@@ -26,6 +26,7 @@
   <a href="#about">About</a>&ensp;&ensp;&ensp;
   <a href="#links">Links</a>&ensp;&ensp;&ensp;
   <a href="#installation">Installation</a>&ensp;&ensp;&ensp;
+  <a href="#settings">Settings</a>&ensp;&ensp;&ensp;
   <a href="#gallery">Gallery</a>&ensp;&ensp;&ensp;
 </div><br>
 
@@ -48,6 +49,9 @@ Clone the repository:
 git clone https://github.com/DaniilZinoviev06/photoshop-installer-linux.git
 cd photoshop-installer-linux
 ```
+
+<h2 id="settings">:warning: Settings</h2>
+
 
 <h2 id="gallery">🌄 Gallery</h2>
 
