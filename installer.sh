@@ -27,7 +27,7 @@ main() {
 
         echo -e "\n \e[91m!\e[0m \e[92mDo not change the location of the generated prefix\e[0m"
 
-        echo -e "\n \e[93m!\e[0m After installation, follow the link and read carefully \e[95mhttps://github.com/DaniilZinoviev06/photoshop-installer-linux?tab=readme-ov-file#warning-settings\e[0m"
+        echo -e "\n \e[93m!\e[0m After installation, follow the link and read carefully \n\e[95mhttps://github.com/DaniilZinoviev06/photoshop-installer-linux?tab=readme-ov-file#warning-settings\e[0m"
 
         echo -e "\n \e[91m!\e[0m \e[92mThere are useful links in paragraph 3('info') :)\e[0m"
 
@@ -79,8 +79,9 @@ main() {
             ;;
 
             3)
-                if [ -f $PHOTOSHOP ]; then
-                    launcherFunc
+                if [ -f "$PHOTOSHOP" ]; then
+                    clear
+                    launcherFunc > /dev/null 2>&1
                 else
                     show_message_bad "First install Photoshop"
                 fi
