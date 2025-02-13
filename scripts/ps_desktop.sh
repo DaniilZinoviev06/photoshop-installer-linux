@@ -24,7 +24,7 @@ createDesktopFunc() {
 
     echo "$INFO" > "$DESKTOP_FILE"
 
-    show_message_info "File created in \e[93m${HOME}/.local/share/applications/\e[0m..."
+    show_message_info "Desktop file created in \e[93m${HOME}/.local/share/applications/\e[0m..."
 }
 
 

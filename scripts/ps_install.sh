@@ -20,7 +20,12 @@ installPSFunc() {
 
     sleep 5
 
-    WINEPREFIX="${WINE_PREF_PATH}" wine "${SCRIPT_DOWNLOADS}/setup.exe"
+    show_message_info "Photoshop is installing now. It will take a couple of minutes. Wait..."
+    notify-send "Photoshop is installing now. It will take a couple of minutes. Wait..."
+
+    sleep 5
+
+    WINEPREFIX="${WINE_PREF_PATH}" wine "${SCRIPT_DOWNLOADS}/setup.exe" /VERYSILENT
 
     sleep 5
 

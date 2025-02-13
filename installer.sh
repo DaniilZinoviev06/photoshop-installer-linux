@@ -36,7 +36,8 @@ main() {
         echo -e "\n\e[34m|\e[0m \e[92m1 - Install Photoshop\e[0m\n"
         echo -e "\e[34m|\e[0m \e[92m2 - Info\e[0m\n"
         echo -e "\e[34m|\e[0m \e[92m3 - Launch Photoshop\e[0m\n"
-        echo -e "\e[34m|\e[0m \e[92m4 - Delete Photoshop\e[0m\n"
+        echo -e "\e[34m|\e[0m \e[92m4 - Configure Wine prefix\e[0m\n"
+        echo -e "\e[34m|\e[0m \e[92m5 - Delete Photoshop\e[0m\n"
 
         read -p "Enter: " choice
 
@@ -83,11 +84,22 @@ main() {
                     clear
                     launcherFunc > /dev/null 2>&1
                 else
+                    clear
                     show_message_bad "First install Photoshop"
                 fi
             ;;
 
             4)
+                if [ -f "$" ]; then
+                    clear
+                    WINE_PREF_PATH
+                else
+                    clear
+                    show_message_bad "First install Photoshop"
+                fi
+            ;;
+
+            5)
                 clear
                 uninstallFunc
             ;;
