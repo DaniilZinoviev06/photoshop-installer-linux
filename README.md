@@ -40,7 +40,7 @@
 
 The purpose of this script is to minimize the possible difficulties that users may encounter during self-installation and configuration. It provides a step-by-step guide and performs all the necessary operations so that you can focus on your work without being distracted by the technical details of the compatibility processes.
 
-<h2 id="links">:scroll: Links</h2>
+<h2 id="links">:link: Links</h2>
 
 <h2 id="installation">:open_file_folder: Installation</h2>
 
