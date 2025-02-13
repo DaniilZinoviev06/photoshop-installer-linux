@@ -20,10 +20,10 @@ check_dep() {
 
     if [ $res -eq 0 ]; then
         show_message_ok "Package $1 is installed"
-        sleep 1
+        sleep 2
     else
         show_message_bad "Package $1 is not installed"
-        sleep 1
+        sleep 2
 
         show_message_bad "Install the missing dependencies(${1}) via the package manager on your distribution! Then re-run the script."
         exit

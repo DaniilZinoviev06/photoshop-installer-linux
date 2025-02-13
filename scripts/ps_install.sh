@@ -12,11 +12,11 @@ launcherFunc() {
 installPSFunc() {
     local ARCHIVE="https://iusearchbtw.isgood.host/files/photoshop_2018.tar.xz"
     local ARCHIVE_NAME="photoshop_2018.tar.xz"
-    local TAREXE_SHA256="fcd675e046766f62cbe88cea9ea37a20b1b95efc13c6860263e52bd495eb3075"
+    local TAR_SHA256="fcd675e046766f62cbe88cea9ea37a20b1b95efc13c6860263e52bd495eb3075"
 
     mkdir -p "$SCRIPT_DOWNLOADS"
 
-    installArchiveFunc "$ARCHIVE_NAME" "$ARCHIVE" "$TAREXE_SHA256"
+    installArchiveFunc "$ARCHIVE_NAME" "$ARCHIVE" "$TAR_SHA256"
 
     sleep 5
 

@@ -4,8 +4,9 @@ SCRIPT_FOLDER="$HOME/.photoshop_2018"
 WINE_PREF_PATH="$HOME/.photoshop_2018/ps_prefix"
 # for exe
 SCRIPT_DOWNLOADS="$HOME/.photoshop_2018/ps_downloads"
-PHOTOSHOP="${HOME}/.photoshop/drive_c/Program Files/Adobe/Adobe Photoshop CC 2018/Photoshop.exe"
+PHOTOSHOP="$WINE_PREF_PATH/drive_c/Program Files/Adobe/Adobe Photoshop CC 2018/Photoshop.exe"
 LOG_FILE="$WINE_PREF_PATH/winetricks_install.log"
+DESKTOP_FILE="$HOME/.local/share/applications/photoshop.desktop"
 
 RED="\e[31m"
 GREEN="\e[32m"
@@ -82,11 +83,14 @@ installArchiveFunc() {
                 if [ $file_checksum == $3 ]; then
                     show_message_ok "Checksum ok..."
 
-                    tar -xJvf "${SCRIPT_DOWNLOADS}/$1" -C "${SCRIPT_DOWNLOADS}"
-
-                    if [[ $? -ne 0 ]]; then
-                        show_message_error "Error when opening archive. Exit..."
-                        exit
+                    if [ -f "${SCRIPT_DOWNLOADS}/setup.exe" ]; then
+                        show_message_ok "setup.exe exist..."
+                    else
+                        tar -xJvf "${SCRIPT_DOWNLOADS}/$1" -C "${SCRIPT_DOWNLOADS}"
+                        if [[ $? -ne 0 ]]; then
+                            show_message_error "Error when opening archive. Exit..."
+                            exit
+                        fi
                     fi
 
                     break
