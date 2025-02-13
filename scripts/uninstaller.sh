@@ -19,8 +19,8 @@ uninstallFunc() {
     else
         show_message_ok "Ok. Uninstalling Photoshop"
 
-        deleteFunc "$HOME/.photoshop_2018/ps_prefix" "Prefix path"
-        deleteFunc "$HOME/.local/share/applications/" "Shortcut"
-        deleteFunc "$HOME/.local/share/icons/photoshop_icon.png" "Icon"
+        deleteFunc "$WINE_PREF_PATH" "Prefix path"
+        deleteFunc "$DESKTOP_FILE" "Shortcut"
+        deleteFunc "$" "Icon"
     fi
 }

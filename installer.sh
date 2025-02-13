@@ -27,13 +27,16 @@ main() {
 
         echo -e "\n \e[91m!\e[0m \e[92mDo not change the location of the generated prefix\e[0m"
 
+        echo -e "\n \e[93m!\e[0m After installation, follow the link and read carefully \e[95mhttps://github.com/DaniilZinoviev06/photoshop-installer-linux?tab=readme-ov-file#warning-settings\e[0m"
+
         echo -e "\n \e[91m!\e[0m \e[92mThere are useful links in paragraph 3('info') :)\e[0m"
 
         echo -e "\n\e[97m-------------------------------------------------------\e[0m"
 
         echo -e "\n\e[34m|\e[0m \e[92m1 - Install Photoshop\e[0m\n"
         echo -e "\e[34m|\e[0m \e[92m2 - Info\e[0m\n"
-        echo -e "\e[34m|\e[0m \e[92m3 - Delete Photoshop\e[0m\n"
+        echo -e "\e[34m|\e[0m \e[92m3 - Launch Photoshop\e[0m\n"
+        echo -e "\e[34m|\e[0m \e[92m4 - Delete Photoshop\e[0m\n"
 
         read -p "Enter: " choice
 
@@ -76,6 +79,14 @@ main() {
             ;;
 
             3)
+                if [ -f $PHOTOSHOP ]; then
+                    launcherFunc
+                else
+                    show_message_bad "First install Photoshop"
+                fi
+            ;;
+
+            4)
                 clear
                 uninstallFunc
             ;;

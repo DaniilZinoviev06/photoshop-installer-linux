@@ -16,9 +16,11 @@ StartupWMClass=photoshop.exe
 # StartupWMClass: i spotted this from Gictorbit. Thanks to him for this
 
 createDesktopFunc() {
-    cp "$(pwd)/photoshop-installer/images/photoshop_icon.png" "$HOME/.local/share/icons/"
-
-    touch $DESKTOP_FILE
+    if [ ! -f "$ICON" ]; then
+        show_message_bad "\e[93mphotoshop_icon.png\e[0m not found..."
+    else
+        cp "$ICON" "$HOME/.local/share/icons/"
+    fi
 
     echo "$INFO" > "$DESKTOP_FILE"
 
