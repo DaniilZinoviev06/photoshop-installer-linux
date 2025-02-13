@@ -18,9 +18,11 @@ StartupWMClass=photoshop.exe
 createDesktopFunc() {
     cp "$(pwd)/photoshop-installer/images/photoshop_icon.png" "$HOME/.local/share/icons/"
 
-    sudo touch "/home/$USER/.local/share/applications/photoshop.desktop"
+    touch "$HOME/.local/share/applications/photoshop.desktop"
 
-    show_message_info "File created in \e[93m/home/$USER/.local/share/applications/\e[0m..."
+    "$HOME/.local/share/applications/photoshop.desktop" << $INFO
+
+    show_message_info "File created in \e[93m${HOME}/.local/share/applications/\e[0m..."
 }
 
 

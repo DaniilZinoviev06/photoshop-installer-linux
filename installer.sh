@@ -32,9 +32,8 @@ main() {
         echo -e "\n\e[97m-------------------------------------------------------\e[0m"
 
         echo -e "\n\e[34m|\e[0m \e[92m1 - Install Photoshop\e[0m\n"
-        echo -e "\e[34m|\e[0m \e[92m2 - Install Camera Raw\e[0m\n"
-        echo -e "\e[34m|\e[0m \e[92m3 - Info\e[0m\n"
-        echo -e "\e[34m|\e[0m \e[92m4 - Delete Photoshop\e[0m\n"
+        echo -e "\e[34m|\e[0m \e[92m2 - Info\e[0m\n"
+        echo -e "\e[34m|\e[0m \e[92m3 - Delete Photoshop\e[0m\n"
 
         read -p "Enter: " choice
 
@@ -52,10 +51,6 @@ main() {
             ;;
 
             2)
-                cr_installer
-            ;;
-
-            3)
                 while true; do
                     clear
                     echo -e "Author: "
@@ -80,7 +75,7 @@ main() {
                 done
             ;;
 
-            4)
+            3)
                 clear
                 uninstallFunc
             ;;

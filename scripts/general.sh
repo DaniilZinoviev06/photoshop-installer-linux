@@ -1,10 +1,10 @@
 #!/bin/bash
 
-WINE_PREF_PATH="$HOME/photoshop"
+SCRIPT_FOLDER="$HOME/.photoshop_2018"
+WINE_PREF_PATH="$HOME/.photoshop_2018/ps_prefix"
 # for exe
-SCRIPT_DOWNLOADS="$(pwd)/script_downloads"
-
-PHOTOSHOP="${HOME}/photoshop/drive_c/Program Files (x86)/photoshop/Photoshop.exe"
+SCRIPT_DOWNLOADS="$HOME/.photoshop_2018/ps_downloads"
+PHOTOSHOP="${HOME}/.photoshop/drive_c/Program Files/Adobe/Adobe Photoshop CC 2018/Photoshop.exe"
 LOG_FILE="$WINE_PREF_PATH/winetricks_install.log"
 
 RED="\e[31m"
