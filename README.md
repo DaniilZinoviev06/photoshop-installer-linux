@@ -63,9 +63,6 @@ Go to ```edit -> preferences -> tools``` and turn off tooltips. Otherwise you wi
 
    <details><summary>image</summary><br><div align = center><img alt="Image" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/settings_tooltips.png"></div></details>
  
-
-
-
 <h2 id="gallery">🌄 Gallery</h2>
 
 <div align="center">
