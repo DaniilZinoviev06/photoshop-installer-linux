@@ -38,6 +38,9 @@
 > 
 > Taken from <a href="https://www.winehq.org/">here</a>
 
+> [!CAUTION]
+> This is a working Photoshop, but it has <a href="">problems</a>. You should understand that I cannot guarantee that any of the features you typically use will work.
+
 The purpose of this script is to minimize the possible difficulties that users may encounter during self-installation and configuration. It provides a step-by-step guide and performs all the necessary operations so that you can focus on your work without being distracted by the technical details of the compatibility processes.
 
 <h2 id="links">:link: Links</h2>
