@@ -17,7 +17,6 @@
 [![Tested on](https://img.shields.io/badge/tested-Ubuntu-001d26?labelColor=%2300c8ff&color=%23001d26)](#)
 [![Tested on](https://img.shields.io/badge/tested-Fedora-001d26?labelColor=%2300c8ff&color=%23001d26)](#)
 
-
 <div align = center>
   <img alt="Image" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/banner.png">
 </div>
@@ -31,6 +30,9 @@
 </div><br>
 
 <h2 id="about">:scroll: About</h2>
+
+**<time datetime="2025-02">Februry 2025: hosting is paid, the script works</time>**
+
 <p>This script will help you install Photoshop CC 2018 on your Linux distribution using Wine.</p>
 
 > [!NOTE]
