@@ -52,6 +52,14 @@ cd photoshop-installer-linux
 
 <h2 id="settings">:warning: Settings</h2>
 
+**If everything worked out for you and the script installed Photoshop, then you need to change some settings**
+
+Go to ```edit -> preferences -> tools``` and turn off tooltips. Otherwise you will have a problem opening images through camera raw (because I removed the helper plugin which was causing problems)
+
+   <details><summary>image</summary><br><div align = center><img alt="Image" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/settings_tooltips.png"></div></details>
+ 
+
+
 
 <h2 id="gallery">🌄 Gallery</h2>
 
