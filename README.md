@@ -66,16 +66,13 @@ Go to ```edit -> preferences -> tools``` and turn off tooltips. Otherwise you wi
 
 <h2 id="gallery">🌄 Gallery</h2>
 
-<p align="center">
+<div align="center">
+  <table><tr>TEST ON</tr><tr><td>
     <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Arch"/>
-&nbsp;
     <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_ubuntu.png" alt="Ubuntu"/>
-</p>
-
-<p align="center">
     <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Fedora"/>
-&nbsp;
     <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Alt"/>
-</p> 
+  </table>
+</div>
 
 <h2 id="uninstall">:red_circle: Uninstall</h2>
