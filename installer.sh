@@ -90,9 +90,9 @@ main() {
             ;;
 
             4)
-                if [ -f "$" ]; then
+                if [ -d "$WINE_PREF_PATH" ]; then
                     clear
-                    WINE_PREF_PATH
+                    WINEPREFIX="$WINE_PREF_PATH" winecfg
                 else
                     clear
                     show_message_bad "First install Photoshop"

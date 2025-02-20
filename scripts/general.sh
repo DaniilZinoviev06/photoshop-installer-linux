@@ -7,6 +7,7 @@ PHOTOSHOP="$WINE_PREF_PATH/drive_c/Program Files/Adobe/Adobe Photoshop CC 2018/P
 LOG_FILE="$WINE_PREF_PATH/winetricks_install.log"
 DESKTOP_FILE="$HOME/.local/share/applications/photoshop.desktop"
 ICON="$(pwd)/images/photoshop_icon.png"
+DESKTOP_ICON="$HOME/.local/share/icons/photoshop_icon.png"
 
 RED="\e[31m"
 GREEN="\e[32m"

@@ -21,7 +21,7 @@ uninstallFunc() {
 
         deleteFunc "$WINE_PREF_PATH" "Prefix path"
         deleteFunc "$DESKTOP_FILE" "Shortcut"
-        deleteFunc "$ICON" "Icon"
+        deleteFunc "$DESKTOP_ICON" "Icon"
     fi
 
     show_question "Want to delete a downloaded Photoshop archive? (Unless you delete it and then want to download Photoshop again via the script, you won't have to download it again)" "N"

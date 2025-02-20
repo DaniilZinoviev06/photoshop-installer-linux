@@ -28,8 +28,7 @@ wine_setup() {
 
     sleep 5
 
-    # vcrun 2005 2017 in theory they should have been there too, but I didn’t notice any difference
-    WINEPREFIX="$WINE_PREF_PATH" winetricks --unattended atmlib fontsmooth=rgb gdiplus vcrun2008 vcrun2010 vcrun2012 vcrun2013 msxml3 msxml6 corefonts 2>&1 | tee "$LOG_FILE"
+    WINEPREFIX="$WINE_PREF_PATH" winetricks --unattended atmlib fontsmooth=rgb gdiplus vcrun2005 vcrun2008 vcrun2010 vcrun2012 vcrun2013 vcrun2017 msxml3 msxml6 corefonts 2>&1 | tee "$LOG_FILE"
     if [ $? -eq 0 ]; then
         show_message_ok "The command was executed successfully..."
     else
