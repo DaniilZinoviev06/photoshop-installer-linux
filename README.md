@@ -65,13 +65,15 @@ Go to ```edit -> preferences -> tools``` and turn off tooltips. Otherwise you wi
  
 <h2 id="gallery">🌄 Gallery</h2>
 
-<div align="center">
-  <table><tr>TEST ON</tr><tr><td>
-    <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Arch"/>
-    <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_ubuntu.png" alt="Ubuntu"/>
-    <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Fedora"/>
-    <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Alt"/>
-  </table>
-</div>
+<details><summary>TEST ON</summary><br>
+  <div align="center">
+    <table>
+      <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Arch"/>
+      <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_ubuntu.png" alt="Ubuntu"/>
+      <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Fedora"/>
+      <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Alt"/>
+    </table>
+  </div>
+</details>
 
 <h2 id="uninstall">:red_circle: Uninstall</h2>
