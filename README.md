@@ -41,7 +41,7 @@
 > Taken from <a href="https://www.winehq.org/">here</a>
 
 > [!CAUTION]
-> This is a working Photoshop, but it has <a href="">problems</a>. You should understand that I cannot guarantee that any of the features you typically use will work.
+>This is a working photoshop, but he may have <a href="">problems</a>. You should understand that I cannot guarantee that any of the features you typically use will work.
 
 The purpose of this script is to minimize the possible difficulties that users may encounter during self-installation and configuration. It provides a step-by-step guide and performs all the necessary operations so that you can focus on your work without being distracted by the technical details of the compatibility processes.
 
@@ -59,7 +59,7 @@ cd photoshop-installer-linux
 
 **If everything worked out for you and the script installed Photoshop, then you need to change some settings**
 
-Go to ```edit -> preferences -> tools``` and turn off tooltips. Otherwise you will have a problem opening images through camera raw (because I removed the helper plugin which was causing problems)
+Go to ```edit -> preferences -> tools``` and turn off tooltips
 
    <details><summary>image</summary><br><div align = center><img alt="Image" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/settings_tooltips.png"></div></details>
  
