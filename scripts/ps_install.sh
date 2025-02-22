@@ -6,7 +6,7 @@ source ./scripts/ps_desktop.sh
 launcherFunc() {
     show_message_info "Photoshop is starting..."
     notify-send "Photoshop is starting..."
-    WINEPREFIX="$WINE_PREF_PATH" wine "$PHOTOSHOP"
+    WINEPREFIX="$WINE_PREF_PATH" wine "$PHOTOSHOP" &> /dev/null
 }
 
 installPSFunc() {
@@ -25,7 +25,7 @@ installPSFunc() {
 
     sleep 5
 
-    WINEPREFIX="${WINE_PREF_PATH}" wine "${SCRIPT_DOWNLOADS}/setup.exe" /VERYSILENT
+    WINEPREFIX="${WINE_PREF_PATH}" wine "${SCRIPT_DOWNLOADS}/setup.exe" /VERYSILENT &> /dev/null
 
     sleep 5
 
