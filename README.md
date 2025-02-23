@@ -80,7 +80,7 @@ Go to ```edit -> preferences -> tools``` and turn off tooltips
  
 <h2 id="gallery">🌄 Gallery</h2>
 
-<details><summary>TESTED ON</summary><br>
+<details><summary>Tested on</summary><br>
   <div align="center">
     <table>
       <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Arch"/>
@@ -92,13 +92,10 @@ Go to ```edit -> preferences -> tools``` and turn off tooltips
 </details>
 
 <h2 id="uninstall">:red_circle: Uninstall</h2>
-
-  Launch the **installer.sh** and select the delete Photoshop option<br>
-  
-  or remove: 
-  
-  **"$HOME/.photoshop_2018"**
-  
-  **"$HOME/.local/share/applications/photoshop.desktop"**
-  
-  **"$HOME/.local/share/icons/photoshop_icon.png"**
+  <details><summary>Uninstall</summary><br>
+    Launch the <strong>installer.sh</strong> and select the delete Photoshop option<br><br>
+    or remove:<br><br>
+    "$HOME/.photoshop_2018"<br>
+    "$HOME/.local/share/applications/photoshop.desktop"<br>
+    "$HOME/.local/share/icons/photoshop_icon.png"<br>
+  </details>
