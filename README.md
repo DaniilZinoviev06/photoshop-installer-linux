@@ -1,4 +1,4 @@
-[![language](https://img.shields.io/badge/language-Bash-001d26?labelColor=%2300c8ff&color=%23001d26)](#)
+[![language](https://img.shields.io/badge/language-shell-001d26?labelColor=%2300c8ff&color=%23001d26)](#)
 [![OS](https://img.shields.io/badge/OS-Linux-001d26?labelColor=%2300c8ff&color=%23001d26)](#)
 [![Requirement](https://img.shields.io/badge/requirement-Wine-001d26?labelColor=%2300c8ff&color=%23001d26)](#)
 [![Requirement](https://img.shields.io/badge/requirement-Winetricks-001d26?labelColor=%2300c8ff&color=%23001d26)](#)
@@ -39,7 +39,7 @@
 > Taken from <a href="https://www.winehq.org/">here</a>
 
 > [!CAUTION]
->This is a working photoshop, but he may have <a href="">problems</a>. You should understand that I cannot guarantee that any of the features you typically use will work.
+>This is a working Photoshop, but he may have <a href="#problems">problems</a>. You should understand that I cannot guarantee that any of the features you typically use will work.
 
 The purpose of this script is to minimize the possible difficulties that users may encounter during self-installation and configuration. It provides a step-by-step guide and performs all the necessary operations so that you can focus on your work without being distracted by the technical details of the compatibility processes.
 
