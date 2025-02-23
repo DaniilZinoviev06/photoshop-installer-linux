@@ -45,6 +45,11 @@ The purpose of this script is to minimize the possible difficulties that users m
 
 <h2 id="installation">:open_file_folder: Installation</h2>
 
+Check what you have installed:
+- wine
+- winetricks
+- curl
+
 Clone the repository:
 ```bash
 git clone https://github.com/DaniilZinoviev06/photoshop-installer-linux.git
