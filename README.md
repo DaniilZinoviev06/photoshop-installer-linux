@@ -23,15 +23,13 @@
 
 <div align="center"> 
   <a href="#about">About</a>&ensp;&ensp;&ensp;
-  <a href="#links">Links</a>&ensp;&ensp;&ensp;
   <a href="#installation">Installation</a>&ensp;&ensp;&ensp;
   <a href="#settings">Settings</a>&ensp;&ensp;&ensp;
+  <a href="#problems">Problems</a>&ensp;&ensp;&ensp;
   <a href="#gallery">Gallery</a>&ensp;&ensp;&ensp;
 </div><br>
 
 <h2 id="about">:scroll: About</h2>
-
-**<time datetime="2025-02">Februry 2025: hosting is paid, the script works</time>**
 
 <p>This script will help you install Photoshop CC 2018 on your Linux distribution using Wine.</p>
 
@@ -45,14 +43,17 @@
 
 The purpose of this script is to minimize the possible difficulties that users may encounter during self-installation and configuration. It provides a step-by-step guide and performs all the necessary operations so that you can focus on your work without being distracted by the technical details of the compatibility processes.
 
-<h2 id="links">:link: Links</h2>
-
 <h2 id="installation">:open_file_folder: Installation</h2>
 
 Clone the repository:
 ```bash
 git clone https://github.com/DaniilZinoviev06/photoshop-installer-linux.git
 cd photoshop-installer-linux
+```
+Run the **installer.sh**:
+```bash
+chmod +x installer.sh
+./installer.sh
 ```
 
 <h2 id="settings">:warning: Settings</h2>
@@ -62,18 +63,42 @@ cd photoshop-installer-linux
 Go to ```edit -> preferences -> tools``` and turn off tooltips
 
    <details><summary>image</summary><br><div align = center><img alt="Image" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/settings_tooltips.png"></div></details>
+
+ 
+<h2 id="problems">:fire: Possible problems</h2>
+  <details><summary>Red screen in Camera Raw</summary><br>
+    <div align = center><img alt="Image" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/camera_raw.png"></div><br>
+    Solution: Go to the Camera Raw settings(edit -> Camera Raw) and turn off the graphic processor
+  </details>
+
+  <details><summary>Black initial screen, create, export as</summary><br>
+    Solution: Check if there is gdiplus in the library section in the configuration of Wine. Check that Windows 7 is chosen in the configuration<br><br>
+    Alternative: edit -> preferences -> general. Turn off "Show Start workspace" and turn on "Use legacy New document". "Export as" cannot be fixed through the settings, but there is a quick export<br><br>
+    I only had this problem on Fedora (Gallery)
+  </details>
+ 
  
 <h2 id="gallery">🌄 Gallery</h2>
 
-<details><summary>TEST ON</summary><br>
+<details><summary>TESTED ON</summary><br>
   <div align="center">
     <table>
       <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Arch"/>
       <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_ubuntu.png" alt="Ubuntu"/>
-      <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Fedora"/>
-      <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_arch.png" alt="Alt"/>
+      <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_mint.png" alt="Mint"/>
+      <img width="49%" src="https://github.com/DaniilZinoviev06/photoshop-installer-linux/blob/master/images/ps_fedora.png" alt="Fedora"/>
     </table>
   </div>
 </details>
 
 <h2 id="uninstall">:red_circle: Uninstall</h2>
+
+  Launch the **installer.sh** and select the delete Photoshop option<br>
+  
+  or remove: 
+  
+  **"$HOME/.photoshop_2018"**
+  
+  **"$HOME/.local/share/applications/photoshop.desktop"**
+  
+  **"$HOME/.local/share/icons/photoshop_icon.png"**
