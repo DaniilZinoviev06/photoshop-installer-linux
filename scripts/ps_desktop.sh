@@ -10,7 +10,7 @@ StartupNotify=true
 Comment=Advanced image editing application
 Exec=env WINEPREFIX=\"$WINE_PREF_PATH\" wine \"$PHOTOSHOP\"
 Icon=$HOME/.local/share/icons/photoshop_icon.png
-StartupWMClass=Photoshop.exe
+StartupWMClass=photoshop.exe
 "
 
 # StartupWMClass: i spotted this from Gictorbit. Thanks to him for this
