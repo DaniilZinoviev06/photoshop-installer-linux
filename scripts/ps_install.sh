@@ -10,7 +10,7 @@ launcherFunc() {
 }
 
 installPSFunc() {
-    local ARCHIVE="https://iusearchbtw.isgood.host/files/photoshop_2018.tar.xz"
+    local ARCHIVE="https://twdl.isgood.host/shr/hmmkemg4xddf/photoshop_2018.tar.xz"
     local ARCHIVE_NAME="photoshop_2018.tar.xz"
     local TAR_SHA256="2e374d9aa2613368fda023a2ed4e4dce02322485311a1781db37f263677b42ba"
 
