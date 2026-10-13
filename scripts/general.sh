@@ -103,30 +103,36 @@ installArchiveFunc() {
             if [ -f "${SCRIPT_DOWNLOADS}/$1" ]; then
                 show_message_ok "File uploaded"
 
-                local file_checksum=$(sha256sum "${SCRIPT_DOWNLOADS}/$1" | awk '{print $1}')
+                if [[ "$CHECK_CHECKSUM" == "yes" ]]; then
+                    local file_checksum=$(sha256sum "${SCRIPT_DOWNLOADS}/$1" | awk '{print $1}')
 
-                show_message_info "sha256..."
+                    show_message_info "sha256..."
 
-                if [ $file_checksum == $3 ]; then
-                    show_message_ok "Checksum ok..."
-
-                    if [ -f "${SCRIPT_DOWNLOADS}/setup.exe" ]; then
-                        show_message_ok "setup.exe exist..."
+                    if [ "$file_checksum" == "$3" ]; then
+                        show_message_ok "Checksum ok..."
                     else
-                        tar -xJvf "${SCRIPT_DOWNLOADS}/$1" -C "${SCRIPT_DOWNLOADS}"
-                        if [[ $? -ne 0 ]]; then
-                            show_message_error "Error when opening archive. Exit..."
-                            exit
+                        show_message_bad "Checksum problem. Re-try..."
+                        if [ -f "${SCRIPT_DOWNLOADS}/$1" ]; then
+                            rm "${SCRIPT_DOWNLOADS}/$1"
                         fi
+                        ((count++))
+                        continue
                     fi
-
-                    break
                 else
-                    show_message_bad "Checksum problem. Re-try..."
-                    if [ -f "${SCRIPT_DOWNLOADS}/$1" ]; then
-                        rm "${SCRIPT_DOWNLOADS}/$1"
+                    show_message_info "Checksum check skipped by user"
+                fi
+
+                if [ -f "${SCRIPT_DOWNLOADS}/setup.exe" ]; then
+                    show_message_ok "setup.exe exist..."
+                else
+                    tar -xJvf "${SCRIPT_DOWNLOADS}/$1" -C "${SCRIPT_DOWNLOADS}"
+                    if [[ $? -ne 0 ]]; then
+                        show_message_bad "Error when opening archive. Exit..."
+                        exit
                     fi
                 fi
+
+                break
             else
                 curl -o "${SCRIPT_DOWNLOADS}/$1" "$2"
             fi

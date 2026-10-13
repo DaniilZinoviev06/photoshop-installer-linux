@@ -8,12 +8,10 @@ source ./scripts/uninstaller.sh
 
 source ./scripts/general.sh
 
+CHECK_CHECKSUM="yes"
+
 main() {
     while true; do
-    	if ! check_url_availability "$ARCHIVE"; then
-    	    return 1
-    	fi
-    
         echo -e "\n \e[91m!\e[0m \e[92mMake sure you have the following dependencies installed:\e[0m"
         echo -e " \e[34m-\e[0m \e[93m wine \e[0m"
         echo -e " \e[34m-\e[0m \e[93m winetricks \e[0m"
@@ -39,6 +37,30 @@ main() {
             1)
                 ver_req
 
+                sleep 5
+                
+        	if ! check_url_availability "$ARCHIVE"; then
+        	    return 1
+        	fi
+                
+                sleep 5
+                
+                show_question "Do you want to verify checksum of the archive?" "y"
+                case "$enter_res" in
+                    yes)
+                        CHECK_CHECKSUM="yes"
+                        show_message_ok "Checksum verification enabled"
+                    ;;
+                    no)
+                        CHECK_CHECKSUM="no"
+                        show_message_info "Checksum verification disabled"
+                    ;;
+                    *)
+                        show_message_bad "Invalid input. Using default (yes)"
+                        CHECK_CHECKSUM="yes"
+                    ;;
+                esac
+                
                 sleep 5
 
                 wine_setup

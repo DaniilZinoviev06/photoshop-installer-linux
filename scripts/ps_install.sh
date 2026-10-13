@@ -7,7 +7,6 @@ ARCHIVE="https://twdl.isgood.host/shr/g6waw7znj19r/photoshop_2018.tar.xz"
 
 launcherFunc() {
     show_message_info "Photoshop is starting..."
-    notify-send "Photoshop is starting..."
     WINEPREFIX="$WINE_PREF_PATH" wine "$PHOTOSHOP" &> /dev/null
 }
 
@@ -22,7 +21,6 @@ installPSFunc() {
     sleep 5
 
     show_message_info "Photoshop is installing now. It will take a couple of minutes. Wait..."
-    notify-send "Photoshop is installing now. It will take a couple of minutes. Wait..."
 
     sleep 5
 
