@@ -3,6 +3,8 @@
 source ./scripts/general.sh
 source ./scripts/ps_desktop.sh
 
+ARCHIVE="https://twdl.isgood.host/shr/g6waw7znj19r/photoshop_2018.tar.xz"
+
 launcherFunc() {
     show_message_info "Photoshop is starting..."
     notify-send "Photoshop is starting..."
@@ -10,7 +12,6 @@ launcherFunc() {
 }
 
 installPSFunc() {
-    local ARCHIVE="https://twdl.isgood.host/shr/udwjyvn71npq/photoshop_2018.tar.xz"
     local ARCHIVE_NAME="photoshop_2018.tar.xz"
     local TAR_SHA256="2e374d9aa2613368fda023a2ed4e4dce02322485311a1781db37f263677b42ba"
 

@@ -10,6 +10,9 @@ source ./scripts/general.sh
 
 main() {
     while true; do
+    	if ! check_url_availability "$ARCHIVE"; then
+    	    return 1
+    	fi
     
         echo -e "\n \e[91m!\e[0m \e[92mMake sure you have the following dependencies installed:\e[0m"
         echo -e " \e[34m-\e[0m \e[93m wine \e[0m"

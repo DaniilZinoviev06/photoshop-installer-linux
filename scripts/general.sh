@@ -61,6 +61,32 @@ show_question() {
     fi
 }
 
+
+check_url_availability() {
+    local url="$1"
+    local http_code
+    
+    show_message_info "Checking availability of the installation file..."
+    
+    http_code=$(curl -s -o /dev/null -w "%{http_code}" -I -L --max-time 15 "$url")
+    
+    if [ "$http_code" -eq 200 ]; then
+        show_message_ok "File is available (HTTP $http_code)"
+        return 0
+    else
+        echo -e "${RED}╔══════════════════════════════════════════════════════════════╗${PLAIN}"
+        echo -e "${RED}║                                                              ║${PLAIN}"
+        echo -e "${RED}║            [ ERROR ] Installation is pointless!              ║${PLAIN}"
+        echo -e "${RED}║                                                              ║${PLAIN}"
+        echo -e "${RED}║            The download link is no longer valid.             ║${PLAIN}"
+        echo -e "${RED}║                                                              ║${PLAIN}"
+        echo -e "${RED}╚══════════════════════════════════════════════════════════════╝${PLAIN}"
+        return 1
+    fi
+}
+
+
+
 # 2 params: archive name and url
 installArchiveFunc() {
 
